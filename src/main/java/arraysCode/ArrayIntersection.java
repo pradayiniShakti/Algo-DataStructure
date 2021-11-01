@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+///// prints the unique common value
 public class ArrayIntersection {
 
 	public static void main(String[] args) {

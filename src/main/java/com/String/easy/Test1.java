@@ -1,27 +1,35 @@
 package com.String.easy;
 
-import java.util.Arrays;
-
 public class Test1 {
-
-	public static void main(String[] args) throws Exception {
-		int[] nums = {1,2,3,4,5,6};
-		int y = 2;
-		foo(nums, 2);
-	}
-
-	
-	public static void foo(int[] nums, int y) throws Exception {
-	    if (y <= 0) {
-	        throw new Exception("invalid argument: " + y);
-	    }
-	    int i = 0;
-	    while (i < nums.length) {
-	        int[] arr = Arrays.copyOfRange(nums, i, i+y);//(nums, 0,2 )//{1,2},//(nums, 2,4)//{3,4}
-	        System.out.println(Arrays.toString(arr));//[1,2],[3,4]
-	        i = i + y;// i=2
-	    }
-	}
-
-
+    private static int count = 0;
+    private int nonStaticCount = 0;
+ 
+    public void incrementCounter()
+    {
+        count++;
+        nonStaticCount++;
+    }
+    public static int getStaticCount()
+    {
+        return count;
+    }
+    public int getNonStaticCount()
+    {
+        return nonStaticCount;
+    }
+    public static void main(String args[])
+    {
+        Test1 stVarObj1 = new Test1();
+        Test1 stVarObj2 = new Test1();
+        stVarObj1.incrementCounter();
+        stVarObj2.incrementCounter();
+        System.out.println("Static count for stVarObj1: " +
+                               stVarObj1.getStaticCount());
+        System.out.println("NonStatic count for stVarObj1: " +
+                                 stVarObj1.getNonStaticCount());
+        System.out.println("Static count for stVarObj2: " +
+                                 stVarObj2.getStaticCount());
+        System.out.println("NonStatic count for stVarObj2: " +
+                                 stVarObj2.getNonStaticCount());
+    }
 }

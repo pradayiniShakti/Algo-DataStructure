@@ -11,14 +11,15 @@ public class RemoveDuplicates {
 		
 		RemoveDuplicates removeDuplicates = new RemoveDuplicates();
 		
-		int[] num = {-3,-1,0,0,0,3,3};
+		//int[] num = {-3,-1,0,0,0,3,3};
+		int[] num = {1,1,2};
 		int[] num1 = new int[num.length];
 		
 		int result = removeDuplicates.getDuplicatesRemoved(num);
-		
+		System.out.println("i "+ result);
 		int[] fnalArray = Arrays.copyOfRange(num, 0, result);
 		
-		//System.out.println("Final array is "+Arrays.toString(fnalArray));
+		System.out.println("Final array is "+Arrays.toString(fnalArray));
 		
 		
 		////////////////////

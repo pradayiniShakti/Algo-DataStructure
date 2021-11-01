@@ -41,9 +41,9 @@ public class RemoveElement {
 		
 		
 		
-		temp.next = head;
+		temp.next = l1;
 		ListNode prev = temp;
-		ListNode curr = head;
+		ListNode curr = l1;
 		
 		while(curr!=null) {
 			if(curr.value==val) {

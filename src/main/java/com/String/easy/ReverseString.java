@@ -21,6 +21,12 @@ public class ReverseString {
 
 	}
 private int getRevNum(int num) {
+	
+	/*
+	 * public int rever(int x){ long r = 0; while(x != 0){ r = r*10 + x%10; x /= 10;
+	 * } if(r >= Integer.MIN_VALUE && r <= Integer.MAX_VALUE) return (int)r; else
+	 * return 0; }
+	 */
 	int rev = 0;
 		while(num>0) {
 			int a = num%10;

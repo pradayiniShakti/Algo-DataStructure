@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CompareArray {
-
+//// get the common in the two array
 	public static void main(String[] args) {
-		int[] num1 = {1,2,3,4};
+		int[] num1 = {1,2,3,4,4,6,6,6};
 		int n1 =  num1.length;
 		
-		int[] num2 = {3,2,0,4};
+		int[] num2 = {3,2,0,4,4,4,5};
 		int n2 =  num2.length;
 	
 		int[] result = getCommonArray(num1, num2,n1,n2);
@@ -23,8 +23,9 @@ public class CompareArray {
 		int i=0;
 		
 		ArrayList<Integer> list = new ArrayList();
+		int z = Math.max(n1, n2);
 				
-		while(i<n1) {
+		while(i<z) {
 			if(num1[i] ==num2[i] ) {
 				list.add(num1[i]);
 				//num3[k++]= num1[i];	
@@ -33,10 +34,6 @@ public class CompareArray {
 			
 		}
 		
-		/////to print list
-		for(int n: list) {
-			System.out.println(n);
-		}
 		
 		return ListToArray(list);
 	}

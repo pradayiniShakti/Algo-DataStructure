@@ -2,7 +2,7 @@ package arraysCode;
 
 import java.util.Arrays;
 
-public class MergeSortedArray {
+public class MergeSortedArrayRegular {
 
 	public static void main(String[] args) {
 		int[] arr1 = {1,2,3,4,6};
@@ -10,7 +10,7 @@ public class MergeSortedArray {
 		int n1 = arr1.length;
 		int n2 = arr2.length;
 		int[] arr3 = new int[n1+n2];		
-		MergeSortedArray mergeSortedArray = new MergeSortedArray();
+		MergeSortedArrayRegular mergeSortedArray = new MergeSortedArrayRegular();
 		int[] mergedArray = mergeSortedArray.getMerge(arr1, arr2, n1,n2, arr3);
 		
 		System.out.println(Arrays.toString(mergedArray));

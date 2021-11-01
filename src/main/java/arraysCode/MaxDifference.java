@@ -3,7 +3,7 @@ package arraysCode;
 public class MaxDifference {
 
 	public static void main(String[] args) {
-		int[] nums = {1,2,4,4,5,6};
+		int[] nums = {1,2,4,4,5,8};
 		int result = getIndex(nums);
 		System.out.println(result);
 	}
